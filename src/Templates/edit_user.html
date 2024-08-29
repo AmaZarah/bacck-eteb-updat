@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{%load static%}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="Tableau">
+    <div class="back">
+        <h5><a href="{% url 'dashboard:index'%}">back</a></h5>
+
+    </div>
+    <div class="titre">
+        <h2>Edit user information</h2>
+    </div>
+    <div class="formuaire" >
+        <form action="" method="post" class="formulaire">
+            {% csrf_token %}
+            {{form_user }}
+            <!--div class="formu">
+                <input type="text" placeholder="admin">
+            </div>
+            <div class="formu">
+                <input type="password" placeholder="ancien mot de passe">
+            </div>
+            <div class="formu">
+                <input type="password" placeholder="nouveau mot de passe">
+            </div>
+            
+            <div class="formu">
+                <input type="password" placeholder="confirmez le mot de passe">
+            </div-->
+            <div class="form-buttons">
+                <button type="reset" class="cancel-btn">Cancel</button>
+                <button type="submit" class="submit-btn">Send</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+{% endblock content %}
+
+        
+    

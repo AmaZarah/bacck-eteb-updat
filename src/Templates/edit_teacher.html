@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{%load static%}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="Tableau">
+    <div class="back">
+        <h5><a href="{% url 'dashboard:index'%}">back</a></h5>
+
+    </div>
+    <div class="titre">
+        <h2>edit teacher information</h2>
+    </div>
+    <div class="formuaire">
+        <form action="" method="post" class="formulaire">
+            {% csrf_token %} {{form_teache }}
+           
+            <!--div class="formu">
+                <input type="text" placeholder="nom">
+            </div>
+            <div class="formu">
+                <input type="text" placeholder="prenon">
+            </div>
+            <div class="radio">
+                <label>Sex</label>
+            <input type="radio" id="homme" name="genre" value="Homme" required>
+            <label for="homme">Homme</label>
+            <input type="radio" id="femme" name="genre" value="Femme" required>
+            <label for="femme">Femme</label>
+                
+            </div>
+            
+            <div class="formu">
+                <input type="date" placeholder="Birth Day">
+            </div>
+            <div class="radio">
+        
+                <label for="classe">Subject</label>
+            <select id="classe" name="classe" required>
+                <option value="1ère">Maths</option>
+                <option value="2nde">Physique</option>
+                <option value="3ème">SVT</option>
+                <option value="4ème">English</option>
+                <option value="5ème">Frensh</option>
+            </select>
+            </div>
+            <div class="formu">
+                <input type="text" placeholder="numéro de telephone">
+            </div>
+            <div class="formu">
+                <input type="text" placeholder="ville">
+            </div-->
+            <div class="form-buttons">
+                <button type="reset" class="cancel-btn">Cancel</button>
+                <button type="submit" class="submit-btn">Send</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+{% endblock content %}
+
+
+        

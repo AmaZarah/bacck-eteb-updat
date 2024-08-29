@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{%load static%}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="Tableau">
+    <div class="back">
+        <h5><a href="{% url 'dashboard:index'%}">back</a></h5>
+
+    </div>
+    <div class="titre">
+        <h2>Edit student information</h2>
+    </div>
+    <div class="formuaire">
+        <form action="" method="post" class="formulaire">
+            {% csrf_token %}
+            {{form_user }}
+            <!--div class="formu">
+                <input type="text" placeholder="first name">
+            </div>
+            <div class="formu">
+                <input type="text" placeholder="last name">
+            </div>
+            <div class="radio">
+                <label>Sex</label>
+            <input type="radio" id="homme" name="genre" value="Homme" required>
+            <label for="homme">Male</label>
+            <input type="radio" id="femme" name="genre" value="Femme" required>
+            <label for="femme">Female</label>
+                
+            </div>
+            <div class="formu">
+                <input type="text" placeholder="matricule">
+            </div>
+            <div class="formu">
+                <input type="date" placeholder="date de naissance">
+            </div>
+            <div class="radio">
+        
+                <label for="classe">Level</label>
+            <select id="classe" name="classe" required>
+                <option value="1ère">1ère</option>
+                <option value="2nde">2nde</option>
+                <option value="3ème">3ème</option>
+                <option value="4ème">4ème</option>
+                <option value="5ème">5ème</option>
+            </select>
+            </div>
+            <div class="formu">
+                <input type="text" placeholder="phone">
+            </div>
+            <div class="formu">
+                <input type="text" placeholder="town">
+            </div-->
+            <div class="form-buttons">
+                <button type="reset" class="cancel-btn">Cancel</button>
+                <button type="submit" class="submit-btn">Send</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+{% endblock content %}
+
+        
+    

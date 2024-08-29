@@ -1,0 +1,100 @@
+
+{% extends "base.html" %}
+{%load static%}
+{% block content %}
+
+<div class="Tableau">
+   <div class="titre">
+      <h1><img src="{% static "logo.jpeg" %} "
+          width="50px"
+          height="50px"
+          class="logo">my etab
+      </h1>
+      <div class="table">
+          <div class="row">
+              <div class="col-md-6">
+                  <h5>Student's Number:</h5>
+                  <p>128 100</p>
+
+              </div>
+              <div class="col-md-6">
+                  <h5>Teacher's Number:</h5>
+                  <p>128 100</p>
+
+              </div>
+          </div>
+          <div class="row">
+                  <div class="col-md-6">
+                      <h5>User's Number:</h5>
+                      <p>128 100</p>
+  
+                  </div>
+                  <div class="col-md-6">
+                      <h5>Student by Gener:</h5>
+                      <div class="relative w-full h-64">
+                          <canvas id="pieChart" width="150" height="100"></canvas>
+                       </div>
+                       <div class="mt-4">
+                          <ul class="list-none">
+                             <li class="flex items-center mb-2">
+                                <span
+                                   class="inline-block w-4 h-4 bg-blue-500 mr-2"
+                                ></span>
+                               MEN
+                             </li>
+                             <li class="flex items-center">
+                                <span
+                                   class="inline-block w-4 h-4 bg-red-500 mr-2"
+                                ></span>
+                                WOMEN
+                             </li>
+                          </ul>
+                       </div>
+                     </div>
+                     </div>
+               </div>
+           </div>
+       </div>
+   
+      </div>
+      <script>
+       const ctx = document.getElementById('pieChart').getContext('2d');
+       const pieChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+             labels: ['Homme', 'Femme'],
+             datasets: [
+                {
+                   data: [60, 40], // Exemples de données
+                   backgroundColor: ['#3498db', '#e74c3c'], // Couleurs pour Homme et Femme
+                   borderWidth: 1,
+                },
+             ],
+          },
+          options: {
+             responsive: true,
+             maintainAspectRatio: false,
+             plugins: {
+                legend: {
+                   display: false, // On désactive la légende intégrée pour utiliser la légende personnalisée
+                },
+             },
+          },
+       });
+    </script>
+                      
+  
+                  </div>
+
+          </div>
+          
+          
+
+      
+
+  </div>
+
+{% endblock content %}
+
+        
+    

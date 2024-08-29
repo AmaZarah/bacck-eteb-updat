@@ -1,0 +1,39 @@
+
+
+
+{% extends "base.html" %}
+{%load static%}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="Tableau">
+    <div class="container-table">
+        <div class="table">
+            <div class="back">
+                <h5><a href="{% url 'dashboard:index'%}">back</a></h5>
+
+            </div>
+            <h2>Report </h2>
+
+            <div class="input-boite-2">
+                <select name="sexe" required class="champ-input">
+                    <option value="">Choisir...</option>
+                    <option value="homme">Liste des élèves</option>
+                    <option value="femme">Liste des professeurs</option>
+                    <option value="femme">Liste des utilisateurs</option>
+                </select>
+            </div>
+
+            <div class="btn">
+                <button type="submit" name="inscrire" class="annuler">Générer format pdf</button>
+                <button type="submit" name="enregistrer" class="inscrire">Générer format excel</button>
+            </div>
+
+        </div>
+    
+
+</div>
+{% endblock content %}
+
+   
